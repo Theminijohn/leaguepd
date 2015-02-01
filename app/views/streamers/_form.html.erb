@@ -1,0 +1,41 @@
+<%= form_for(@streamer) do |f| %>
+  <% if @streamer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@streamer.errors.count, "error") %> prohibited this streamer from being saved:</h2>
+
+      <ul>
+      <% @streamer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :twitch_username %><br>
+    <%= f.text_field :twitch_username %>
+  </div>
+  <div class="field">
+    <%= f.label :league_ign %><br>
+    <%= f.text_field :league_ign %>
+  </div>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :server %><br>
+    <%= f.text_field :server %>
+  </div>
+  <div class="field">
+    <%= f.label :division %><br>
+    <%= f.text_field :division %>
+  </div>
+  <div class="field">
+    <%= f.label :tier %><br>
+    <%= f.text_field :tier %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

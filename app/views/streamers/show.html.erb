@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Twitch username:</strong>
+  <%= @streamer.twitch_username %>
+</p>
+
+<p>
+  <strong>League ign:</strong>
+  <%= @streamer.league_ign %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @streamer.name %>
+</p>
+
+<p>
+  <strong>Server:</strong>
+  <%= @streamer.server %>
+</p>
+
+<p>
+  <strong>Division:</strong>
+  <%= @streamer.division %>
+</p>
+
+<p>
+  <strong>Tier:</strong>
+  <%= @streamer.tier %>
+</p>
+
+<%= link_to 'Edit', edit_streamer_path(@streamer) %> |
+<%= link_to 'Back', streamers_path %>
